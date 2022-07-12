@@ -3,8 +3,10 @@ let cantoVoice = new SpeechSynthesisUtterance()
 let savedText=''
 let index=-1
 
-let savedjson = await fetch("saved.json")
-  .then(response => response.json())
+const requestURL = 'https://aphkyle.github.io/buiyay/saved.json'
+const request = new Request(requestURL)
+const response = await fetch(request)
+const savedjson = await response.json()
 t.value = savedjson[window.location.search]
 
 
