@@ -35,7 +35,7 @@ play.onclick = ()=>{
   console.log("play called")
   if(speech.paused){
     console.log("pausing")
-    speech.speak(cantoVoice)
+    speech.resume(cantoVoice)
   }else{
     console.log("not pausing")
     cantoVoice.text = savedText
@@ -44,7 +44,7 @@ play.onclick = ()=>{
 }
 pause.onclick = ()=>{
   console.log("pause called")
-  cantoVoice.pause()
+  speech.pause()
 }
 stopb.onclick = ()=>{
   console.log("stopb called")
