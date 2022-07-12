@@ -3,9 +3,10 @@ let cantoVoice = new SpeechSynthesisUtterance()
 let savedText=''
 let index=-1
 
-fetch("saved.json")
+let savedjson = fetch("saved.json")
   .then(response => response.json())
-  .then(json => console.log(json))
+t.text = savedjson[window.location.search]
+
 
 console.log("hi im running")
 
