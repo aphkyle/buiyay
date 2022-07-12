@@ -3,7 +3,7 @@ let cantoVoice = new SpeechSynthesisUtterance()
 let savedText=''
 let index=-1
 
-let savedjson = fetch("saved.json")
+let savedjson = await fetch("saved.json")
   .then(response => response.json())
 t.value = savedjson[window.location.search]
 
