@@ -5,7 +5,7 @@ let index=-1
 
 let savedjson = fetch("saved.json")
   .then(response => response.json())
-t.text = savedjson[window.location.search]
+t.value = savedjson[window.location.search]
 
 
 console.log("hi im running")
