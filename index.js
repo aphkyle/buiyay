@@ -3,6 +3,10 @@ let cantoVoice = new SpeechSynthesisUtterance()
 let savedText=''
 let index=-1
 
+fetch("saved.json")
+  .then(response => response.json())
+  .then(json => console.log(json))
+
 console.log("hi im running")
 
 setTimeout(() => {
