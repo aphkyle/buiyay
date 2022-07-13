@@ -5,9 +5,11 @@ let index=-1
 
 const requestURL = 'https://aphkyle.github.io/buiyay/saved.json'
 const request = new Request(requestURL)
-const response = await fetch(request)
-const savedjson = await response.json()
-t.value = savedjson[window.location.search]
+var globJson
+fetch("saved.json")
+  .then(response => response.json())
+  .then(json => globJson = json)
+t.value = globJson[window.location.search]
 
 
 console.log("hi im running")
