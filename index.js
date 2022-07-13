@@ -7,12 +7,9 @@ const requestURL = 'https://aphkyle.github.io/buiyay/saved.json'
 const request = new Request(requestURL)
 const replare = /(\(.*?\))/g
 
-var globJson
 fetch("saved.json")
   .then(response => response.json())
-  .then(json => globJson = json)
-t.value = globJson[window.location.search]
-
+  .then(json => t.value = json[window.location.search])
 
 console.log("hi im running")
 
@@ -28,6 +25,7 @@ submit.onclick = ()=>{
   savedText=t.value
 }
 replaa.onclick = ()=>{
+  console.log("replaa called")
   t.value = t.value.replace(replare, '')
 }
 show.onclick = ()=>{
