@@ -5,6 +5,8 @@ let index=-1
 
 const requestURL = 'https://aphkyle.github.io/buiyay/saved.json'
 const request = new Request(requestURL)
+const replare = /(\(.*?\))/g
+
 var globJson
 fetch("saved.json")
   .then(response => response.json())
@@ -24,6 +26,9 @@ cantoVoice.volume = 100
 submit.onclick = ()=>{
   console.log("s called")
   savedText=t.value
+}
+replaa.onclick = ()=>{
+  t.value = t.value.replace(replare, '')
 }
 show.onclick = ()=>{
   index=-1
