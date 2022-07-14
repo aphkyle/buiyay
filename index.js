@@ -10,9 +10,8 @@ const replare = /([\(（].*?[）\)])/g
 if (window.location.search){
   fetch("saved.json")
     .then(response => response.json())
-    .then(json => savedText = json[window.location.search])
+    .then(json => t.value = json[window.location.search])
 }
-t.value = savedText
 console.log("hi im running")
 
 setTimeout(() => {
