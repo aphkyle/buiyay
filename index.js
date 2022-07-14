@@ -33,7 +33,7 @@ show.onclick = ()=>{
   index=-1
   console.log("S called")
   // thanks to your shitcode 🖕
-  if (t.value == savedText){
+  if (t.value.length == 0){
     t.value=savedText
   }else{
     alert("dont make the same mistake again please")
