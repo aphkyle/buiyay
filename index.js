@@ -12,6 +12,7 @@ if (window.location.search){
     .then(response => response.json())
     .then(json => t.value = json[window.location.search])
 }
+savedText = t.value
 console.log("hi im running")
 
 setTimeout(() => {
