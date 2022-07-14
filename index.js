@@ -5,7 +5,7 @@ let index=-1
 
 const requestURL = 'https://aphkyle.github.io/buiyay/saved.json'
 const request = new Request(requestURL)
-const replare = /(\(.*?\))/g
+const replare = /([\(（].*?[）\)])/g
 
 fetch("saved.json")
   .then(response => response.json())
