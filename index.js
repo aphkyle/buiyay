@@ -7,10 +7,11 @@ const requestURL = 'https://aphkyle.github.io/buiyay/saved.json'
 const request = new Request(requestURL)
 const replare = /([\(（].*?[）\)])/g
 
-fetch("saved.json")
-  .then(response => response.json())
-  .then(json => t.value = json[window.location.search])
-
+if (window.location.search){
+  fetch("saved.json")
+    .then(response => response.json())
+    .then(json => t.value = json[window.location.search])
+}
 console.log("hi im running")
 
 setTimeout(() => {
@@ -31,10 +32,16 @@ replaa.onclick = ()=>{
 show.onclick = ()=>{
   index=-1
   console.log("S called")
-  t.value=savedText
+  // thanks to your shitcode 🖕
+  if (t.value != savedText){
+    t.value=savedText
+  }else{
+    alert("dont make the same mistake again please")
+  }
 }
 hide.onclick = ()=>{
   index=0
+  savedText = t.value
   console.log("H called")
   t.value=''
 }
